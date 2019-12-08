@@ -22,9 +22,10 @@
           type="relief"
           size="large"
           color="#98DBC6"
-          class="b"
           @click="$router.push({ name: 'projects' })"
-          >{{ skill.label }} Projects</vs-button
+          >
+          <strong style="color: #5D535E;">{{ skill.label }} Projects</strong>
+          </vs-button
         >
       </vs-row>
     </div>
