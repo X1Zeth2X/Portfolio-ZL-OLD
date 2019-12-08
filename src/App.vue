@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar class="pb3" />
+    <Contact/>
 
     <transition name="fade" mode="out-in">
       <router-view />
@@ -13,10 +14,12 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 import Navbar from "@/components/Navbar.vue";
+import Contact from "@/components/Dialogs/Contact.vue";
 
 @Component({
   components: {
-    Navbar
+    Navbar,
+    Contact
   }
 })
 export default class App extends Vue {}
