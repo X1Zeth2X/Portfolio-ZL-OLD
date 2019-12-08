@@ -1,32 +1,62 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Navbar class="pb3" />
+
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+
+import Navbar from "@/components/Navbar.vue";
+
+@Component({
+  components: {
+    Navbar
+  }
+})
+export default class App extends Vue {}
+</script>
+
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  /* 
+  Font Weights:
+    100,300,400,700,900
+  Color scheme: 
+    Aquamarine - 98DBC6, 
+    Turquoise - 5BC9AC, 
+    Canary Yellow - E6D72A,
+    Pink Tulip - F18D9E
+  */
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  padding-top: 5rem;
 
-#nav {
-  padding: 30px;
+  .desc {
+    margin: 0 auto;
+    word-wrap: break-word;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  .btn-radius {
+    border-radius: 0.5em;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
   }
 }
 </style>

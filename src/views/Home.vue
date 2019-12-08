@@ -1,18 +1,96 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="home" class="pt5 tc">
+    <section id="intro" class="grey">
+      <h1 class="f1-l f2 b">Greetings 👋</h1>
+      <p class="f2-l f2-m f3 w-60-m w-60-l w-90 desc">
+        I'm an aspiring software developer that enjoys to tinker, innovate, and
+        solve modern problems with modern solutions/technologies .
+      </p>
+
+      <div class="mt4 f3">
+        <vs-button
+          size="large"
+          type="relief"
+          class="btn-radius fw7"
+          color="#F18D9E"
+          >Get in touch</vs-button
+        >
+      </div>
+    </section>
+
+    <section class="white pb5" style="background-color: #f18d9e;">
+      <h1 class="f1-l f2 b mt6 pt5">Skills 🧰</h1>
+      <p class="f2-l f2-m f3 w-60-m w-60-l w-90 desc">
+        Frontend, Backend, UI/UX designer.
+      </p>
+
+      <div
+        class="pt4 gray mw7-l desc tl ph2"
+        v-for="skill in skills"
+        :key="skill.label"
+      >
+        <DetailCard :skill="skill" />
+      </div>
+
+      <div class="mt4 f3">
+        <vs-button
+          size="large"
+          type="relief"
+          class="btn-radius fw7"
+          color="#5bc8ac"
+          >Contact me</vs-button
+        >
+      </div>
+    </section>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
 
-export default {
-  name: "home",
+import DetailCard from "@/components/Home/DetailCard.vue";
+
+@Component({
   components: {
-    HelloWorld
+    DetailCard
   }
-};
+})
+export default class Home extends Vue {
+  public skills: object[] = [
+    {
+      label: "Frontend",
+      icon: "web",
+
+      desc:
+        "When I began my journey into this field one of the things I kept wondering about was how \
+      people made web applications so fluent and smooth, the possibility of creating such beautiful apps\
+      is something that keeps me wanting to get better and better everyday.",
+
+      stacks: ["Vue.js", "HTML", "CSS", "JavaScript/TypeSript"]
+    },
+    {
+      label: "Backend",
+      icon: "code",
+
+      desc:
+        "Thinking about it, I find myself more of a backend person since I mainly enjoy problem solving and \
+      the logistics behind the solution like diving deep into different methods and continuously asking myself questions on how to \
+      improve the products that I make and its impact.",
+
+      stacks: ["Flask & Django (Python)", "PostGres (SQL)", "GOLang"]
+    },
+    {
+      label: "UI/UX Designing",
+      icon: "🎨",
+
+      desc:
+        "As mentioned above, I like beautiful apps which I think involves a lot of UI/UX, I wouldn't claim that I'm\
+      really good when it comes to designing but I am getting better with my craft, as someone once said\
+      'Good artists make while Great artists steal'.",
+
+      stacks: ["Figma", "Paper and Pencil"]
+    }
+  ];
+}
 </script>
