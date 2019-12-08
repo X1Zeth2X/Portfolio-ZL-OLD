@@ -26,10 +26,16 @@
       </p>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-lg="4" vs-sm="12"
-            v-for="project in feProjects" :key="project.name"
+          <vs-col
+            vs-type="flex"
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="4"
+            vs-sm="12"
+            v-for="project in feProjects"
+            :key="project.name"
           >
-            <InfoCard :project="project"/>
+            <InfoCard :project="project" />
           </vs-col>
         </vs-row>
       </div>
@@ -39,10 +45,16 @@
       <h1 class="f1-l f2 b mt0 pt5">#Backend</h1>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-lg="4" vs-sm="12"
-            v-for="project in beProjects" :key="project.name"
+          <vs-col
+            vs-type="flex"
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="4"
+            vs-sm="12"
+            v-for="project in beProjects"
+            :key="project.name"
           >
-            <InfoCard :project="project"/>
+            <InfoCard :project="project" />
           </vs-col>
         </vs-row>
       </div>
@@ -52,10 +64,16 @@
       <h1 class="f1-l f2 b mt0 pt5">#UI/UX</h1>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
-          <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-lg="4" vs-sm="12"
-            v-for="project in uiProjects" :key="project.name"
+          <vs-col
+            vs-type="flex"
+            vs-justify="center"
+            vs-align="center"
+            vs-lg="4"
+            vs-sm="12"
+            v-for="project in uiProjects"
+            :key="project.name"
           >
-            <InfoCard :project="project"/>
+            <InfoCard :project="project" />
           </vs-col>
         </vs-row>
       </div>
@@ -71,14 +89,14 @@ import InfoCard from "@/components/Projects/InfoCard.vue";
 
 @Component({
   components: {
-    InfoCard,
+    InfoCard
   }
 })
 export default class Projects extends Vue {
   public feProjects: object[] = [
     {
       name: "Kagawasan",
-      image: require('@/assets/images/fe/Kagawasan.png'),
+      image: require("@/assets/images/fe/Kagawasan.png"),
       desc: "Konishi's frontend",
       view: "https://konishi.netlify.com/",
       github: "https://github.com/konishi-project/kagawasan",
@@ -86,7 +104,7 @@ export default class Projects extends Vue {
     },
     {
       name: "Portfolio",
-      image: require('@/assets/images/fe/Portfolio.png'),
+      image: require("@/assets/images/fe/Portfolio.png"),
       desc: "My current portfolio ^-^",
       view: "",
       github: "https://github.com/X1Zeth2X/Portfolio-ZL",
@@ -94,18 +112,18 @@ export default class Projects extends Vue {
     },
     {
       name: "My old portfolio",
-      image: require('@/assets/images/fe/OldPortfolio.png'),
+      image: require("@/assets/images/fe/OldPortfolio.png"),
       view: "http://x1zeth2x.herokuapp.com/",
       github: "https://github.com/X1Zeth2X/personalwebsite",
       desc: "Konishi's frontend",
       stack: ["Vue.js"]
     }
-  ]
+  ];
 
   public beProjects: object[] = [
     {
       name: "Zimmerman",
-      image: require('@/assets/images/be/Zimmerman.png'),
+      image: require("@/assets/images/be/Zimmerman.png"),
       desc: "Konishi's backend",
       view: "https://konishi-zimmerman.herokuapp.com/",
       github: "https://github.com/konishi-project/zimmerman",
@@ -113,7 +131,7 @@ export default class Projects extends Vue {
     },
     {
       name: "Projectify's API",
-      image: require('@/assets/images/be/Projectify.png'),
+      image: require("@/assets/images/be/Projectify.png"),
       view: "http://x1zeth2x.herokuapp.com/",
       github: "https://github.com/X1Zeth2X/projectify-api",
       desc: "Projectify's prototype API written in GOLang. ",
@@ -121,18 +139,18 @@ export default class Projects extends Vue {
     },
     {
       name: "REST Boilerplate",
-      image: require('@/assets/images/be/Boilerplate.png'),
+      image: require("@/assets/images/be/Boilerplate.png"),
       desc: "REST API written in Python 3.6+ ",
       view: "",
       github: "https://github.com/X1Zeth2X/flask-restplus-boilerplate",
       stack: ["Vue.js"]
-    },
-  ]
+    }
+  ];
 
   public uiProjects: object[] = [
     {
       name: "Portfolio Design",
-      image: require('@/assets/images/ui/Portfolio.png'),
+      image: require("@/assets/images/ui/Portfolio.png"),
       desc: "Portfolio idea mockup design",
       view: "",
       github: "",
@@ -140,7 +158,7 @@ export default class Projects extends Vue {
     },
     {
       name: "Naql Mobile App",
-      image: require('@/assets/images/ui/Naql.png'),
+      image: require("@/assets/images/ui/Naql.png"),
       view: "",
       github: "",
       desc: "Naql's student card view",
@@ -148,12 +166,12 @@ export default class Projects extends Vue {
     },
     {
       name: "Kagawasan Banner",
-      image: require('@/assets/images/ui/Kagawasan.png'),
+      image: require("@/assets/images/ui/Kagawasan.png"),
       desc: "Kagawasan's display banner",
       view: "",
       github: "",
       stack: ["Figma"]
-    },
-  ]
+    }
+  ];
 }
 </script>
