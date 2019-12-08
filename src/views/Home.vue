@@ -13,6 +13,7 @@
           type="relief"
           class="btn-radius fw7"
           color="#F18D9E"
+          @click="contact"
           >Get in touch</vs-button
         >
       </div>
@@ -38,6 +39,7 @@
           type="relief"
           class="btn-radius fw7"
           color="#5bc8ac"
+          @click="contact"
           >Contact me</vs-button
         >
       </div>
@@ -50,6 +52,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 import DetailCard from "@/components/Home/DetailCard.vue";
+import { Action } from 'vuex-class';
 
 @Component({
   components: {
@@ -57,6 +60,8 @@ import DetailCard from "@/components/Home/DetailCard.vue";
   }
 })
 export default class Home extends Vue {
+  @Action('openContact', { namespace: 'dialog' }) public contact: any;
+
   public skills: object[] = [
     {
       label: "Frontend",
