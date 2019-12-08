@@ -14,7 +14,8 @@
           type="relief"
           class="btn-radius fw7"
           color="#F18D9E"
-          >Contact me</vs-button
+          @click="contact"
+          >Let's work together!</vs-button
         >
       </div>
     </section>
@@ -86,6 +87,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 import InfoCard from "@/components/Projects/InfoCard.vue";
+import { Action } from 'vuex-class';
 
 @Component({
   components: {
@@ -93,6 +95,8 @@ import InfoCard from "@/components/Projects/InfoCard.vue";
   }
 })
 export default class Projects extends Vue {
+  @Action('openContact', { namespace: 'dialog' }) public contact: any;
+
   public feProjects: object[] = [
     {
       name: "Kagawasan",
