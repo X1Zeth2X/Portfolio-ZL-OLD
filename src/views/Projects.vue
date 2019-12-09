@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <section class="white pb5 h-100 " style="background-color: #FA6775">
+    <section class="white pb5 h-100 " style="background-color: #FA6775" id="frontend">
       <h1 class="f1-l f2 b mt6 pt5">#Frontend</h1>
       <p class="f2-l f2-m f3 w-60-m w-60-l w-90 desc pb4">
         Click on image for more info 😁
@@ -44,7 +44,7 @@
       </div>
     </section>
 
-    <section class="white pb5 h-100" style="background-color: #FFD64D">
+    <section class="white pb5 h-100" style="background-color: #FFD64D" id="backend">
       <h1 class="f1-l f2 b mt0 pt5">#Backend</h1>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
@@ -63,7 +63,7 @@
       </div>
     </section>
 
-    <section class="white pb5 h-100" style="background-color: #9BC01C">
+    <section class="white pb5 h-100" style="background-color: #9BC01C" id="ui">
       <h1 class="f1-l f2 b mt0 pt5">#UI/UX</h1>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
@@ -87,6 +87,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
+import VueScrollTo from "vue-scrollto";
 
 import InfoCard from "@/components/Projects/InfoCard.vue";
 import ProjectDialog from "@/components/Dialogs/Project.vue";
@@ -94,16 +95,32 @@ import { Action } from "vuex-class";
 
 import { Project } from "@/store/dialogs/types";
 
+const scroller = VueScrollTo;
+
 @Component({
   components: {
     InfoCard,
-    ProjectDialog
+    ProjectDialog,
   }
 })
 export default class Projects extends Vue {
   @Action("toggleContact", { namespace: "dialog" }) public contact: any;
   @Action("toggleProject", { namespace: "dialog" })
   public openProjectDialog: any;
+
+  public mounted() {
+    this.checkScroll();
+  }
+
+  public checkScroll() {
+    setTimeout(() => {
+      if (this.$route.query.view !== undefined) {
+        scroller.scrollTo("#" + this.$route.query.view, 1000, {
+          offset: -60
+        });
+      }
+    }, 200);
+  }
 
   public feProjects: Project[] = [
     {

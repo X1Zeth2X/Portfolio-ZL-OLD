@@ -1,6 +1,6 @@
 <template>
-  <a @click="$router.push({ name: 'projects' })">
-    <vs-card actionable @click="goTo">
+  <a @click="goToProjects(skill.id)">
+    <vs-card actionable>
       <div slot="header" class="f3-m f3-l f4 fw9">
         <vs-icon :icon="skill.icon" style="font-size: 20px;"></vs-icon>
         {{ skill.label }}
@@ -23,7 +23,7 @@
             type="relief"
             size="large"
             color="#98DBC6"
-            @click="$router.push({ name: 'projects' })"
+            @click="goToProjects(skill.label)"
           >
             <strong style="color: #363237;">
               {{ skill.label }} Projects
@@ -41,5 +41,11 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class DetailCard extends Vue {
   @Prop() skill!: any;
+
+  public goToProjects(type: string) {
+    this.$router.push({ name: 'projects', query: {
+      view: type,
+    }});
+  }
 }
 </script>

@@ -65,6 +65,7 @@ export default class Home extends Vue {
   public skills: object[] = [
     {
       label: "Frontend",
+      id: "frontend",
       icon: "web",
 
       desc:
@@ -76,6 +77,7 @@ export default class Home extends Vue {
     },
     {
       label: "Backend",
+      id: "backend",
       icon: "code",
 
       desc:
@@ -87,6 +89,7 @@ export default class Home extends Vue {
     },
     {
       label: "UI/UX Designing",
+      id: "ui",
       icon: "🎨",
 
       desc:
