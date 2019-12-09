@@ -41,9 +41,5 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 @Component
 export default class DetailCard extends Vue {
   @Prop() skill!: any;
-
-  public goTo() {
-    console.log("Hello World!");
-  }
 }
 </script>
