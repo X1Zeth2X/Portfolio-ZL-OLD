@@ -1,12 +1,13 @@
-import { MutationTree } from 'vuex';
-import { DialogState } from './types';
+import { MutationTree } from "vuex";
+import { DialogState } from "./types";
 
 export const mutations: MutationTree<DialogState> = {
-  openContact(state) {
-    state.contact = true;
+  toggleContact(state) {
+    state.contact = !state.contact;
   },
 
-  closeContact(state) {
-    state.contact = false;
+  toggleProject(state, project) {
+    project ? (state.selectedProject = project) : null;
+    state.project = !state.project;
   }
-}
+};

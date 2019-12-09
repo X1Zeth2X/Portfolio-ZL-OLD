@@ -23,10 +23,9 @@
           size="large"
           color="#98DBC6"
           @click="$router.push({ name: 'projects' })"
-          >
-          <strong style="color: #5D535E;">{{ skill.label }} Projects</strong>
-          </vs-button
         >
+          <strong style="color: #363237;"> {{ skill.label }} Projects </strong>
+        </vs-button>
       </vs-row>
     </div>
   </vs-card>

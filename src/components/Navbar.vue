@@ -38,7 +38,7 @@ export default class Navbar extends Vue {
     },
     {
       label: "About",
-      color: "#e6d72a",
+      color: "#B075CD",
       path: "about"
     }
   ];

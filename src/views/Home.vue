@@ -52,7 +52,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 import DetailCard from "@/components/Home/DetailCard.vue";
-import { Action } from 'vuex-class';
+import { Action } from "vuex-class";
 
 @Component({
   components: {
@@ -60,7 +60,7 @@ import { Action } from 'vuex-class';
   }
 })
 export default class Home extends Vue {
-  @Action('openContact', { namespace: 'dialog' }) public contact: any;
+  @Action("toggleContact", { namespace: "dialog" }) public contact: any;
 
   public skills: object[] = [
     {

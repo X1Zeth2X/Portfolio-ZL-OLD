@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar class="pb3" />
-    <Contact/>
+    <Contact />
 
     <transition name="fade" mode="out-in">
       <router-view />

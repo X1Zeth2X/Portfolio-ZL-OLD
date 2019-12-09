@@ -1,13 +1,13 @@
-import { ActionTree } from 'vuex';
-import { DialogState } from './types';
-import { RootState } from '../types';
+import { ActionTree } from "vuex";
+import { DialogState } from "./types";
+import { RootState } from "../types";
 
 export const actions: ActionTree<DialogState, RootState> = {
-  openContact({ commit }) {
-    commit('openContact');
+  toggleContact({ commit }) {
+    commit("toggleContact");
   },
 
-  closeContact({ commit }) {
-    commit('closeContact');
-  },
-}
+  toggleProject({ commit }, project) {
+    commit("toggleProject", project);
+  }
+};
