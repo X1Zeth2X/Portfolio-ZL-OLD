@@ -26,6 +26,10 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
   /* 
   Font Weights:
