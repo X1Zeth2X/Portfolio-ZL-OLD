@@ -95,7 +95,7 @@ export default class Home extends Vue {
       desc:
         "As mentioned above, I like beautiful apps which I think involves a lot of UI/UX, I wouldn't claim that I'm\
       really good when it comes to designing but I am getting better with my craft, as someone once said\
-      'Good artists make while Great artists steal'.",
+      'Good artists copy while Great artists steal'.",
 
       stacks: ["Figma", "Paper and Pencil"]
     }
