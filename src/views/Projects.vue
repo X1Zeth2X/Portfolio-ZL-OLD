@@ -22,7 +22,11 @@
       </div>
     </section>
 
-    <section class="white pb5 h-100 " style="background-color: #FA6775" id="frontend">
+    <section
+      class="white pb5 h-100 "
+      style="background-color: #FA6775"
+      id="frontend"
+    >
       <h1 class="f1-l f2 b mt6 pt5">#Frontend</h1>
       <p class="f2-l f2-m f3 w-60-m w-60-l w-90 desc pb4">
         Click on image for more info 😁
@@ -44,7 +48,11 @@
       </div>
     </section>
 
-    <section class="white pb5 h-100" style="background-color: #FFD64D" id="backend">
+    <section
+      class="white pb5 h-100"
+      style="background-color: #FFD64D"
+      id="backend"
+    >
       <h1 class="f1-l f2 b mt0 pt5">#Backend</h1>
       <div class="w-90 gray desc">
         <vs-row vs-w="12">
@@ -100,7 +108,7 @@ const scroller = VueScrollTo;
 @Component({
   components: {
     InfoCard,
-    ProjectDialog,
+    ProjectDialog
   }
 })
 export default class Projects extends Vue {

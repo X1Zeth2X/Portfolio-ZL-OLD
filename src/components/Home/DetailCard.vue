@@ -43,9 +43,12 @@ export default class DetailCard extends Vue {
   @Prop() skill!: any;
 
   public goToProjects(type: string) {
-    this.$router.push({ name: 'projects', query: {
-      view: type,
-    }});
+    this.$router.push({
+      name: "projects",
+      query: {
+        view: type
+      }
+    });
   }
 }
 </script>
