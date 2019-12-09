@@ -7,6 +7,7 @@
     accept-text="Send"
     color="#5D535E"
     @close="close"
+    style="font-family: 'Raleway', sans-serif;"
   >
     <div class="f5">
       <a href="mailto:zeth.leonardo@protonmail.com" target="_blank">

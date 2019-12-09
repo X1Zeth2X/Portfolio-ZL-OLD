@@ -9,6 +9,7 @@
     button-accept="relief"
     button-cancel="relief"
     @close="toggleProject"
+    style="font-family: 'Raleway', sans-serif;"
   >
     <img :src="project.info.image" />
 
