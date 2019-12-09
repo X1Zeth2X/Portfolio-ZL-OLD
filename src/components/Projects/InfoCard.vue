@@ -10,12 +10,9 @@
     <div slot="footer">
       <vs-row vs-justify="flex-end">
         <a :href="project.view" target="_blank" v-if="project.view">
-        <vs-button
-          type="relief"
-          size="large"
-          color="#98DBC6"
-          class="b mr1"
-          >View</vs-button>
+          <vs-button type="relief" size="large" color="#98DBC6" class="b mr1"
+            >View</vs-button
+          >
         </a>
 
         <a :href="project.github" target="_blank" v-if="project.github">

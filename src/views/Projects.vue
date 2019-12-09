@@ -112,7 +112,8 @@ export default class Projects extends Vue {
       desc: "Konishi's frontend",
       view: "https://konishi.netlify.com/",
       github: "https://github.com/konishi-project/kagawasan",
-      story: "It all began when I started contributing to Konishi, at first I was going to do \
+      story:
+        "It all began when I started contributing to Konishi, at first I was going to do \
       SSR but then I was told that CSR would be better so I learned Vue, Kagawasan had many \
       iterations before it, most of them got rewritten and replaced which eventually turned out \
       to the product it is today.",
@@ -124,7 +125,8 @@ export default class Projects extends Vue {
       desc: "My current portfolio ^-^",
       view: "",
       github: "https://github.com/X1Zeth2X/Portfolio-ZL",
-      story: "I badly needed a new portfolio because my old one was mainly off a Vuetify \
+      story:
+        "I badly needed a new portfolio because my old one was mainly off a Vuetify \
       template which felt generic in my opinion, so this time I wanted to write my own from the \
       ground up using the skills I learned from Kagawasan.",
       stack: ["Vue.js", "VueSax", "TypeScript"]
@@ -135,7 +137,8 @@ export default class Projects extends Vue {
       view: "http://x1zeth2x.herokuapp.com/",
       github: "https://github.com/X1Zeth2X/personalwebsite",
       desc: "Old dev portfolio *shrug*",
-      story: "One of my very first projects. I had borrowed a template from Vuetify and then \
+      story:
+        "One of my very first projects. I had borrowed a template from Vuetify and then \
       made some minor adjustments to fit my needs.",
       stack: ["Vue.js", "Vuetify", "Javascript"]
     }
@@ -148,7 +151,8 @@ export default class Projects extends Vue {
       desc: "Konishi's backend",
       view: "https://konishi-zimmerman.herokuapp.com/",
       github: "https://github.com/konishi-project/zimmerman",
-      story: "This RESTFul API has many features that most social platforms have, \
+      story:
+        "This RESTFul API has many features that most social platforms have, \
       such as User CRUD, Post CRUD, Notifications,\
       Authentication with JWTs, and so much more.",
       stack: ["Flask Python", "PostGreSQL", "SQLAlchemy"]
@@ -159,7 +163,8 @@ export default class Projects extends Vue {
       view: "http://x1zeth2x.herokuapp.com/",
       github: "https://github.com/X1Zeth2X/projectify-api",
       desc: "Projectify's prototype API written in GOLang. ",
-      story: "Currently a barebones REST server for the projectify platform, it has nothing much at the moment but it will later on \
+      story:
+        "Currently a barebones REST server for the projectify platform, it has nothing much at the moment but it will later on \
       support the usual CRUD operations, Authentication (JWT), and more.",
       stack: ["GOlang", "Go-CHI", "GORM"]
     },
@@ -168,7 +173,8 @@ export default class Projects extends Vue {
       image: require("@/assets/images/be/Boilerplate.png"),
       desc: "REST API written in Python 3.6+ ",
       view: "",
-      story: "A boilerplate that includes things like User login, registration, and \
+      story:
+        "A boilerplate that includes things like User login, registration, and \
       authentication with JWT. It is also scalable and efficient to boost developer \
       efficiency.",
       github: "https://github.com/X1Zeth2X/flask-restplus-boilerplate",
@@ -183,7 +189,8 @@ export default class Projects extends Vue {
       desc: "Portfolio idea mockup design",
       view: "",
       github: "",
-      story: "One of my early portfolio ideas that I designed but never really \
+      story:
+        "One of my early portfolio ideas that I designed but never really \
       came into fruition (in terms of turning into a website)",
       stack: ["Figma"]
     },
@@ -192,7 +199,8 @@ export default class Projects extends Vue {
       image: require("@/assets/images/ui/Naql.png"),
       view: "",
       github: "",
-      story: "Naql is a bus assistant platform that monitors student's bus activity \
+      story:
+        "Naql is a bus assistant platform that monitors student's bus activity \
       and this is the student's card view which gets scanned.",
       desc: "Naql's student card view",
       stack: ["Figma", "Paper and Pencil"]

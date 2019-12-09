@@ -1,25 +1,20 @@
 <template>
-  <vs-prompt 
+  <vs-prompt
     :active.sync="project.show"
-    :title="project.info.name" 
+    :title="project.info.name"
     color="#5D535E"
-
     buttons-hidden
-
     accept-text="View"
     cancel-text="Github"
-
     button-accept="relief"
     button-cancel="relief"
-
-    @close="toggleProject" 
-
+    @close="toggleProject"
   >
     <img :src="project.info.image" />
 
     <div class="f4-l f4-m f5">
-      This project was written using 
-      <span 
+      This project was written using
+      <span
         v-for="(tech, index) in project.info.stack"
         :key="index"
         v-text="tech + (index + 1 === project.info.stack.length ? '.' : ', ')"
@@ -31,9 +26,7 @@
         <strong>Details:</strong>
         {{ project.info.story }}
       </p>
-
     </div>
-   
   </vs-prompt>
 </template>
 
