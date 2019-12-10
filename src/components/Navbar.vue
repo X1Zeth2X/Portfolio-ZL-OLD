@@ -48,24 +48,26 @@ export default class Navbar extends Vue {
       label: "Projects",
       color: "#f18d9e",
       path: "projects"
-    },
+    }
   ];
 
   public btnRoutes: object[] = [
     {
       icon: "mdi-face",
       path: "about",
-      color: "#8D6380",
+      color: "#8D6380"
     },
     {
       icon: "mdi-github-circle",
       link: "https://github.com/x1zeth2x/",
-      color: "#575757",
-    },
-  ]
+      color: "#575757"
+    }
+  ];
 
   public btnGo(item: any) {
-    item.link !== undefined ? window.open(item.link) : this.$router.push({ name: item.path });
+    item.link !== undefined
+      ? window.open(item.link)
+      : this.$router.push({ name: item.path });
   }
 
   public goTo(path: string) {
