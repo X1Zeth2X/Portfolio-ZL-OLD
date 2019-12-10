@@ -23,6 +23,7 @@
         icon-pack="mdi"
         type="relief"
         radius
+        :disabled="$route.name === btn.path"
         :color="btn.color"
         @click="btnGo(btn)"
       >
@@ -53,7 +54,7 @@ export default class Navbar extends Vue {
   public btnRoutes: object[] = [
     {
       icon: "mdi-face",
-      route: "about",
+      path: "about",
       color: "#8D6380",
     },
     {
@@ -64,7 +65,7 @@ export default class Navbar extends Vue {
   ]
 
   public btnGo(item: any) {
-    item.link !== undefined ? window.open(item.link) : this.$router.push({ name: item.route });
+    item.link !== undefined ? window.open(item.link) : this.$router.push({ name: item.path });
   }
 
   public goTo(path: string) {
