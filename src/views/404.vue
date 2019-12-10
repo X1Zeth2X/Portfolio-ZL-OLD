@@ -4,7 +4,9 @@
       Are ye lost?
     </h2>
 
-    <vs-button type="relief" class="mt4 btn-radius f1">Home</vs-button>
+    <vs-button type="relief" class="mt4 f1"
+      @click="$router.push({ name: 'home' })"
+    >Home</vs-button>
   </div>
 </template>
 
