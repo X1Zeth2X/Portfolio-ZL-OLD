@@ -2,18 +2,33 @@
   <a @click="goToProjects(skill.id)">
     <vs-card actionable>
       <div slot="header" class="f3-m f3-l f4 fw9">
-        <vs-icon :icon="skill.icon" style="font-size: 20px;"></vs-icon>
+        <vs-icon
+          :icon="skill.icon"
+          icon-pack="mdi"
+          style="font-size: 20px;"
+        ></vs-icon>
         {{ skill.label }}
       </div>
 
-      <span
-        class="f4 fw7"
+      <vs-chip
+        class="b"
         v-for="(tech, index) in skill.stacks"
         :key="index"
-        v-text="tech + (index + 1 === skill.stacks.length ? '.' : ', ')"
-      />
+        icon="mdi-account"
+        icon-pack="mdi"
+        style="font-size: 1.5em;"
+      >
+        <vs-avatar
+          :icon="tech.icon"
+          icon-pack="mdi"
+          :color="tech.color"
+        ></vs-avatar>
+        {{ tech.name }}
+      </vs-chip>
 
-      <p class="f5 pv3">
+      <vs-divider></vs-divider>
+
+      <p class="f4-l f4-m f5 pv3">
         {{ skill.desc }}
       </p>
 

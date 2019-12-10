@@ -1,28 +1,43 @@
 <template>
   <vs-prompt
     :active.sync="contact"
+    icon-pack="mdi"
+    close-icon="mdi-close"
     title="Get in contact"
     button-cancel="flat"
     button-accept="relief"
     accept-text="Send"
-    color="#5D535E"
+    close-text="x"
     @close="close"
+    color="#5D535E"
     style="font-family: 'Raleway', sans-serif;"
   >
     <div class="f5">
       <a href="mailto:zeth.leonardo@protonmail.com" target="_blank">
         <vs-button
           type="relief"
-          icon="email"
+          icon="mdi-email"
+          icon-pack="mdi"
           class="mr2"
           color="#EC96A4"
         ></vs-button>
       </a>
       <a href="https://goo.gl/maps/wzgdaDHXMY2zanNU8" target="_blank">
-        <vs-button type="relief" color="#CD7576" class="b">Location</vs-button>
+        <vs-button
+          type="relief"
+          color="#CD7576"
+          class="b"
+          icon="mdi-map-marker"
+          icon-pack="mdi"
+        ></vs-button>
       </a>
       <a href="https://github.com/x1zeth2x/" target="_blank">
-        <vs-button type="relief" class="ml2 b" color="#5D535E"
+        <vs-button
+          type="relief"
+          class="ml2 b"
+          color="#5D535E"
+          icon="mdi-github-circle"
+          icon-pack="mdi"
           >Github</vs-button
         >
       </a>
@@ -37,6 +52,7 @@
         :placeholder="info.label"
         :icon-after="true"
         :icon="info.icon"
+        icon-pack="mdi"
         v-model="info.val"
         class="mv2"
       ></vs-input>
@@ -69,17 +85,17 @@ export default class Contact extends Vue {
   public contacts: object = [
     {
       label: "Full Name",
-      icon: "person",
+      icon: "mdi-account",
       val: this.fullName
     },
     {
       label: "Email",
-      icon: "email",
+      icon: "mdi-email",
       val: this.email
     },
     {
       label: "Company Name or Link",
-      icon: "apartment",
+      icon: "mdi-domain",
       val: this.company
     }
   ];

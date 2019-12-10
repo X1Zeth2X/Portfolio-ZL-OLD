@@ -2,6 +2,8 @@
   <vs-prompt
     :active.sync="project.show"
     :title="project.info.name"
+    icon-pack="mdi"
+    close-icon="mdi-close"
     color="#5D535E"
     buttons-hidden
     accept-text="View"

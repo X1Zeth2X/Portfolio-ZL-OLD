@@ -66,38 +66,91 @@ export default class Home extends Vue {
     {
       label: "Frontend",
       id: "frontend",
-      icon: "web",
+      icon: "mdi-view-quilt",
 
       desc:
         "When I began my journey into this field one of the things I kept wondering about was how \
       people made web applications so fluent and smooth, the possibility of creating such beautiful apps\
       is something that keeps me wanting to get better and better everyday.",
 
-      stacks: ["Vue.js", "HTML", "CSS", "JavaScript/TypeSript"]
+      stacks: [
+        {
+          name: "Vue.js",
+          icon: "mdi-vuejs",
+          color: "#30956B"
+        },
+        {
+          name: "HTML",
+          icon: "mdi-language-html5",
+          color: "#D98653"
+        },
+        {
+          name: "CSS",
+          icon: "mdi-language-css3",
+          color: "#0C69B5"
+        },
+        {
+          name: "TypeScript",
+          icon: "mdi-language-typescript",
+          color: "#2D7AB9"
+        }
+      ]
     },
     {
       label: "Backend",
       id: "backend",
-      icon: "code",
+      icon: "mdi-code-tags",
 
       desc:
         "Thinking about it, I find myself more of a backend person since I mainly enjoy problem solving and \
       the logistics behind the solution like diving deep into different methods and continuously asking myself questions on how to \
       improve the products that I make and its impact.",
 
-      stacks: ["Flask & Django (Python)", "PostGres (SQL)", "GOLang"]
+      stacks: [
+        {
+          name: "Flask",
+          icon: "mdi-flask-round-bottom",
+          color: "#565656"
+        },
+        {
+          name: "Django",
+          icon: "mdi-language-python",
+          color: "#DDD73C"
+        },
+        {
+          name: "PostGreSQL",
+          icon: "mdi-database",
+          color: "#543CDD"
+        },
+        {
+          name: "GOLang",
+          icon: "mdi-language-go",
+          color: "#76C6E7"
+        }
+      ]
     },
     {
       label: "UI/UX Designing",
       id: "ui",
-      icon: "🎨",
+      icon: "mdi-palette",
 
       desc:
         "As mentioned above, I like beautiful apps which I think involves a lot of UI/UX, I wouldn't claim that I'm\
       really good when it comes to designing but I am getting better with my craft, as someone once said\
       'Good artists copy while Great artists steal'.",
 
-      stacks: ["Figma", "Paper and Pencil"]
+      stacks: [
+        {
+          name: "Figma",
+          icon: "mdi-material-design",
+          color: "#DE6244"
+        },
+        {
+          name: "Paper and Pencil",
+          icon: "mdi-pencil-box-multiple",
+          color: "#AB59C2"
+        }
+      ]
     }
   ];
 }
