@@ -16,6 +16,18 @@
         {{ route.label }}
       </vs-button>
     </vs-navbar-item>
+
+    <vs-navbar-item class="mr2" v-for="(btn, index) in btnRoutes" :key="index">
+      <vs-button
+        :icon="btn.icon"
+        icon-pack="mdi"
+        type="relief"
+        radius
+        :color="btn.color"
+        @click="btnGo(btn)"
+      >
+      </vs-button>
+    </vs-navbar-item>
   </vs-navbar>
 </template>
 
@@ -36,12 +48,24 @@ export default class Navbar extends Vue {
       color: "#f18d9e",
       path: "projects"
     },
-    {
-      label: "About",
-      color: "#B075CD",
-      path: "about"
-    }
   ];
+
+  public btnRoutes: object[] = [
+    {
+      icon: "mdi-face",
+      route: "about",
+      color: "#8D6380",
+    },
+    {
+      icon: "mdi-github-circle",
+      link: "https://github.com/x1zeth2x/",
+      color: "#575757",
+    },
+  ]
+
+  public btnGo(item: any) {
+    item.link !== undefined ? window.open(item.link) : this.$router.push({ name: item.route });
+  }
 
   public goTo(path: string) {
     this.$router.push({ name: path });
